@@ -1,0 +1,7 @@
+image: rugarci/smartd:latest
+manifests:
+  -
+    image: rugarci/smartd:armv7hf
+    platform:
+      architecture: arm
+      os: linux
