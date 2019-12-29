@@ -10,6 +10,11 @@ if [[ ! -v SMTP_ROOT ]]; then
     exit 1
 fi
 
+if [[ ! -v SMTP_HOSTNAME ]]; then
+    echo "SMTP_HOSTNAME is not set"
+    exit 1
+fi
+
 if [[ ! -v SMTP_MAIL_HUB ]]; then
     echo "SMTP_MAIL_HUB is not set"
     exit 1
