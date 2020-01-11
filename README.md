@@ -1,5 +1,7 @@
 # docker-smartd
 
+[![](https://images.microbadger.com/badges/image/rugarci/smartd.svg)](https://microbadger.com/images/rugarci/smartd)
+
 [![Docker Pulls](https://img.shields.io/docker/pulls/rugarci/smartd.svg)](https://hub.docker.com/r/rugarci/smartd/) 
 
 S.M.A.R.T mail alerts with Docker
