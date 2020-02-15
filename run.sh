@@ -34,9 +34,8 @@ if [[ ! -v SMARTD_OPTIONS ]]; then
     SMARTD_OPTIONS=
 fi
 
-
-gawk 'match($0,/([^{}]*)({{\s*)(\S+)(\s*}})([^{}]*)/,a) && (a[3] in ENVIRON) { $0 = a[1] ENVIRON[a[3]] a[5] } 1' /etc/smartd.conf.tmpl > /etc/smartd.conf
-gawk 'match($0,/([^{}]*)({{\s*)(\S+)(\s*}})([^{}]*)/,a) && (a[3] in ENVIRON) { $0 = a[1] ENVIRON[a[3]] a[5] } 1' /etc/ssmtp/ssmtp.conf.tmpl > /etc/ssmtp/ssmtp.conf
+envsubst < "/etc/smartd.conf.tmpl" > "/etc/smartd.conf"
+envsubst < "/etc/ssmtp/ssmtp.conf.tmpl" > "/etc/ssmtp/ssmtp.conf"
 
 cat /etc/smartd.conf
 
