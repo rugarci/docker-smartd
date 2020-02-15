@@ -1,6 +1,6 @@
 FROM balenalib/armv7hf-alpine
 
-RUN apk --update --upgrade add smartmontools ssmtp mailx gawk
+RUN apk --update --upgrade add smartmontools ssmtp mailx gettext
 
 COPY run.sh /run.sh
 RUN chmod +x /run.sh
