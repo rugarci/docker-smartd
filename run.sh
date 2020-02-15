@@ -34,8 +34,8 @@ if [[ ! -v SMARTD_OPTIONS ]]; then
     SMARTD_OPTIONS=
 fi
 
-envsubst < "/etc/smartd.conf.tmpl" > "/etc/smartd.conf"
-envsubst < "/etc/ssmtp/ssmtp.conf.tmpl" > "/etc/ssmtp/ssmtp.conf"
+/usr/bin/envsubst < "/etc/smartd.conf.tmpl" > "/etc/smartd.conf"
+/usr/bin/envsubst < "/etc/ssmtp/ssmtp.conf.tmpl" > "/etc/ssmtp/ssmtp.conf"
 
 cat /etc/smartd.conf
 
