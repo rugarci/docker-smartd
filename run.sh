@@ -37,6 +37,4 @@ fi
 /usr/bin/envsubst < "/etc/smartd.conf.tmpl" > "/etc/smartd.conf"
 /usr/bin/envsubst < "/etc/ssmtp/ssmtp.conf.tmpl" > "/etc/ssmtp/ssmtp.conf"
 
-cat /etc/smartd.conf
-
 /usr/sbin/smartd --debug
