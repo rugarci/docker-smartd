@@ -26,6 +26,6 @@ For Docker compose
       - SMTP_MAIL_HUB=smtp.gmail.com:587
       - SMTP_AUTH_USER=xxxxxxx@gmail.com 
       - SMTP_AUTH_PASS=xxxxxxxx
-      - SMARTD_OPTIONS=-d scsi
+      - SMARTD_OPTIONS=-d scsi -n standby,15
     privileged: true
 ```
