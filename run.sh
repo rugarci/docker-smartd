@@ -34,6 +34,12 @@ if test -z $SMARTD_OPTIONS; then
     $SMARTD_OPTIONS="-n standby"
 fi
 
+if test -z $MAIL_FROM; then
+    echo "MAIL_FROM is not set"
+else
+    /usr/bin/envsubst < "/etc/ssmtp/revaliases.tmpl" > "/etc/ssmtp/revaliases"
+fi
+
 /usr/bin/envsubst < "/etc/smartd.conf.tmpl" > "/etc/smartd.conf"
 /usr/bin/envsubst < "/etc/ssmtp/ssmtp.conf.tmpl" > "/etc/ssmtp/ssmtp.conf"
 
