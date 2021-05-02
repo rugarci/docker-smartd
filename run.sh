@@ -31,7 +31,7 @@ if test -z $SMTP_AUTH_PASS; then
 fi
 
 if test -z $SMARTD_OPTIONS; then
-    $SMARTD_OPTIONS="-n standby"
+    SMARTD_OPTIONS="-n standby"
 fi
 
 if test -z $MAIL_FROM; then
