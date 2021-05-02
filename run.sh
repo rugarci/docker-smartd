@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [[ ! -v MAIL_TO ]]; then
     echo "MAIL_TO is not set"
