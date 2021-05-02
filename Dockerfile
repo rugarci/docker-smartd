@@ -8,4 +8,4 @@ RUN chmod +x /run.sh
 ADD smartd.conf.tmpl /etc/smartd.conf.tmpl
 ADD ssmtp.conf.tmpl /etc/ssmtp/ssmtp.conf.tmpl
 
-CMD /run.sh
+ENTRYPOINT ["./run.sh"]
