@@ -3,9 +3,6 @@ FROM alpine:3
 ARG BUILD_DATE
 ARG VERSION
 ARG VCS_REF
-ARG ARCH
-
-RUN echo "I'm ${ARCH}"
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.name="docker-smartd" \
@@ -22,5 +19,6 @@ RUN chmod +x /run.sh
 
 ADD smartd.conf.tmpl /etc/smartd.conf.tmpl
 ADD ssmtp.conf.tmpl /etc/ssmtp/ssmtp.conf.tmpl
+ADD revaliases.tmpl /etc/ssmtp/revaliases.tmpl
 
 ENTRYPOINT ["./run.sh"]
