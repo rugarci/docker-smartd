@@ -3,6 +3,9 @@ FROM alpine:3
 ARG BUILD_DATE
 ARG VERSION
 ARG VCS_REF
+ARG ARCH
+
+RUN echo "I'm ${ARCH}"
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.name="docker-smartd" \
