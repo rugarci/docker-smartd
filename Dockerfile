@@ -19,6 +19,6 @@ RUN chmod +x /run.sh
 
 ADD smartd.conf.tmpl /etc/smartd.conf.tmpl
 ADD ssmtp.conf.tmpl /etc/ssmtp/ssmtp.conf.tmpl
-ADD revaliases.conf.tmpl /etc/ssmtp/revaliases.conf.tmpl
+ADD revaliases.tmpl /etc/ssmtp/revaliases.tmpl
 
 ENTRYPOINT ["./run.sh"]
