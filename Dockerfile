@@ -1,4 +1,4 @@
-FROM balenalib/armv7hf-alpine
+FROM alpine:3
 
 RUN apk --update --upgrade add smartmontools ssmtp mailx gettext
 
