@@ -1,7 +1,7 @@
 # docker-smartd
 
 [![Latest Github release](https://img.shields.io/github/release/rugarci/docker-smartd.svg)](https://github.com/rugarci/docker-smartd/releases/latest)
-[![Image size](https://img.shields.io/docker/image-size/rugarci/usbreset/latest)](https://hub.docker.com/r/rugarci/smartd)
+[![Image size](https://img.shields.io/docker/image-size/rugarci/smartd/latest)](https://hub.docker.com/r/rugarci/smartd)
 [![Docker Pulls](https://img.shields.io/docker/pulls/rugarci/smartd.svg)](https://hub.docker.com/r/rugarci/smartd)
 
 S.M.A.R.T mail alerts with Docker
