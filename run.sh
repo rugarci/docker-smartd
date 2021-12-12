@@ -1,41 +1,43 @@
 #!/bin/sh
 
 if test -z $MAIL_TO; then
-    echo "$MAIL_TO is not set"
+    echo "MAIL_TO is not set"
     exit 1
 fi
 
 if test -z $SMTP_ROOT; then
-    echo "$SMTP_ROOT is not set"
+    echo "SMTP_ROOT is not set"
     exit 1
 fi
 
 if test -z $SMTP_HOSTNAME; then
-    echo "$SMTP_HOSTNAME is not set"
+    echo "SMTP_HOSTNAME is not set"
     exit 1
 fi
 
 if test -z $SMTP_MAIL_HUB; then
-    echo "$SMTP_MAIL_HUB is not set"
+    echo "SMTP_MAIL_HUB is not set"
     exit 1
 fi
 
 if test -z $SMTP_AUTH_USER; then
-    echo "$SMTP_AUTH_USER is not set"
+    echo "SMTP_AUTH_USER is not set"
     exit 1
 fi
 
 if test -z $SMTP_AUTH_PASS; then
-    echo "$SMTP_AUTH_PASS is not set"
+    echo "SMTP_AUTH_PASS is not set"
     exit 1
 fi
 
 if test -z $SMARTD_DEVICE; then
-    SMARTD_DEVICE="DEVICESCAN"
+    export SMARTD_DEVICE="DEVICESCAN"
+    echo "SMARTD_DEVICE is not set, Using default: $SMARTD_DEVICE"
 fi
 
 if test -z $SMARTD_OPTIONS; then
-    SMARTD_OPTIONS="-n standby"
+    export SMARTD_OPTIONS="-n standby"
+    echo "SMARTD_OPTIONS is not set, Using default: $SMARTD_OPTIONS"
 fi
 
 if test -z $MAIL_FROM; then
