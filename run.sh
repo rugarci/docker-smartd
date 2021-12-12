@@ -1,5 +1,8 @@
 #!/bin/sh
 
+# Default values
+true ${SMARTD_DEVICE:=DEVICESCAN}
+
 if test -z $MAIL_TO; then
     echo "$MAIL_TO is not set"
     exit 1
