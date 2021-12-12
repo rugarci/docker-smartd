@@ -1,8 +1,5 @@
 #!/bin/sh
 
-# Default values
-true ${SMARTD_DEVICE:=DEVICESCAN}
-
 if test -z $MAIL_TO; then
     echo "$MAIL_TO is not set"
     exit 1
@@ -31,6 +28,10 @@ fi
 if test -z $SMTP_AUTH_PASS; then
     echo "$SMTP_AUTH_PASS is not set"
     exit 1
+fi
+
+if test -z $SMARTD_DEVICE; then
+    SMARTD_DEVICE="DEVICESCAN"
 fi
 
 if test -z $SMARTD_OPTIONS; then
