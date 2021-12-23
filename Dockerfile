@@ -1,9 +1,10 @@
 ARG ALPINE_BASE="3.12.9"
+
+FROM alpine:${ALPINE_BASE}
+
 ARG BUILD_DATE
 ARG VERSION
 ARG VCS_REF
-
-FROM alpine:${ALPINE_BASE}
 
 LABEL org.label-schema.build-date=$BUILD_DATE \
     org.label-schema.name="docker-smartd" \
