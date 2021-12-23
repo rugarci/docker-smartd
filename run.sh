@@ -11,8 +11,8 @@ if test -z $SMTP_ROOT; then
 fi
 
 if test -z $SMTP_HOSTNAME; then
-    echo "SMTP_HOSTNAME is not set"
-    exit 1
+    export SMTP_HOSTNAME=$(hostname)
+    echo "SMTP_HOSTNAME is not set, Using default: $SMTP_HOSTNAME"
 fi
 
 if test -z $SMTP_MAIL_HUB; then
